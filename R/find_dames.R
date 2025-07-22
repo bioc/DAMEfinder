@@ -119,7 +119,7 @@ find_dames <- function(sa, design, coef = 2, contrast = NULL,
     } else if (pvalAssign == "empirical") {
         
         rf <- bumphunter::regionFinder(x = sm_tstat, 
-            chr = as.character(GenomeInfoDb::seqnames(sat)), 
+            chr = as.character(Seqinfo::seqnames(sat)), 
             pos = midpt, cluster = S4Vectors::mcols(sat)$cluster, 
             cutoff = K, maxGap = maxGap, assumeSorted = TRUE, 
             order = FALSE, verbose = verbose)

@@ -43,7 +43,7 @@
 #' @importFrom GenomicRanges GRanges
 #' @importFrom IRanges IRanges
 #' @importFrom GenomicAlignments readGAlignmentPairs
-#' @importFrom GenomeInfoDb seqnames
+#' @importFrom Seqinfo seqnames
 #'
 #' @export
 extract_bams <- function(bamFiles, vcfFiles, sampleNames, referenceFile, 

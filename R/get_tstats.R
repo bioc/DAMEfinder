@@ -86,7 +86,7 @@ get_tstats <- function(sa, design, contrast = NULL, method = "ls",
     }
     
     S4Vectors::mcols(sa)$cluster <- bumphunter::clusterMaker(
-        chr = as.character(GenomeInfoDb::seqnames(sa)), 
+        chr = as.character(Seqinfo::seqnames(sa)), 
         pos = midpt, maxGap = maxGap, assumeSorted = TRUE)
     
     # smooth moderated t-stats

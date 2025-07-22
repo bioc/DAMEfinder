@@ -111,7 +111,7 @@ empirical_pval <- function(presa, design, rforiginal, coeff,
         
         K <- stats::quantile(abs(sm_tstat), Q, na.rm = TRUE)
         permrf <- bumphunter::regionFinder(x = sm_tstat, 
-            chr = as.character(GenomeInfoDb::seqnames(sa_perm)), 
+            chr = as.character(Seqinfo::seqnames(sa_perm)), 
             pos = midpt, cluster = S4Vectors::mcols(sa_perm)$cluster, 
             cutoff = K, maxGap = maxGap, verbose = FALSE)
         return(abs(permrf$area))

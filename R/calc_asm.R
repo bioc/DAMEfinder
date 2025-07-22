@@ -153,7 +153,7 @@ calc_asm <- function(sampleList, beta = 0.5, a = 0.2, transform = modulus_sqrt,
     if (verbose) 
         message("Returning SummarizedExperiment with ", nrow(asm), 
             " CpG pairs", appendLF = FALSE)
-    o <- order(GenomeInfoDb::seqnames(sa), gr$midpt)
+    o <- order(Seqinfo::seqnames(sa), gr$midpt)
     sa[o]
 }
 

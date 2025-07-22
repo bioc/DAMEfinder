@@ -47,7 +47,7 @@
 #' @importFrom IRanges IRanges
 #' @importFrom BiocGenerics start
 #' @importFrom BiocGenerics end
-#' @importFrom GenomeInfoDb seqnames
+#' @importFrom Seqinfo seqnames
 #' @import ggplot2
 #'
 #' @export
@@ -319,7 +319,7 @@ methyl_circle_plot <- function(snp, vcfFile, bamFile, refFile, build = "hg19",
 #' @importFrom IRanges IRanges
 #' @importFrom BiocGenerics start
 #' @importFrom BiocGenerics end
-#' @importFrom GenomeInfoDb seqnames
+#' @importFrom Seqinfo seqnames
 #' @import ggplot2
 #'
 #' @export

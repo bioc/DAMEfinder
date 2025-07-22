@@ -88,7 +88,7 @@ calc_derivedasm <- function(sampleList, cores = 1, verbose = TRUE) {
         mcols(unGR) <- mcol
         
         # human ordering
-        unGR <- GenomeInfoDb::sortSeqlevels(unGR)
+        unGR <- Seqinfo::sortSeqlevels(unGR)
         unGR <- sort(unGR)
         
         # The unGR has the filtered sites for this sample
@@ -183,7 +183,7 @@ calc_derivedasm <- function(sampleList, cores = 1, verbose = TRUE) {
         colData = S4Vectors::DataFrame(samples = names(allGR)))
     
     # last human sorting
-    derived_ASM_matrix <- GenomeInfoDb::sortSeqlevels(derived_ASM_matrix)
+    derived_ASM_matrix <- Seqinfo::sortSeqlevels(derived_ASM_matrix)
     derived_ASM_matrix <- sort(derived_ASM_matrix)
     
     return(derived_ASM_matrix)
